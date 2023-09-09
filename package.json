@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "prettier --write .",
+    "lint:tailwind": "prettier --list-different \"**/*.{js,jsx,ts,tsx}\"",
+    "lint": "npm run lint:tailwind",
+    "lint:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "autoprefixer": "10.4.15",
@@ -14,6 +17,11 @@
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
     "tailwindcss": "3.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4"
   }
 }
