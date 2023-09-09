@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
               "transition-all" + (isMenuOpen ? "" : " -translate-x-24 ")
             }
           >
-            <div className={"bg-black w-full h-screen fixed transition-opacity duration-300 " + (isMenuOpen ? " opacity-90 cursor-pointer " : " opacity-0 ")}
+            <div className={"bg-black w-full h-screen fixed transition-opacity" + (isMenuOpen ? " opacity-90 " : " opacity-0 ")}
               onMouseEnter={overlayHandleMouseEnter}
               onMouseLeave={overlayHandleMouseLeave}
               onTouchStart={() => isMenuOpen ? setIsMenuOpen(!isMenuOpen) : ""}>

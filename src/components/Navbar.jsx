@@ -57,20 +57,13 @@ function Navbar({
       </nav>
       <div
         className={
-          "sticky left-0 top-0 flex h-screen flex-col items-center justify-center transition-all" +
-          (isMenuOpen ? "" : " -translate-x-24 ")
+          "bg-primary-700 sticky left-0 top-0 flex h-screen flex-col items-center justify-center transition-all" +
+          (isMenuOpen ? " w-1 " : " w-6 -translate-x-24 lg:w-4 ")
         }
-      >
-        <div
-          className={
-            "bg-primary-700 sticky left-0 top-0 h-screen transition-[width] duration-200 " +
-            (isMenuOpen ? " w-1 " : " w-6 lg:w-4 ")
-          }
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          onTouchStart={() => setIsMenuOpen(true)}
-        ></div>
-      </div>
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={() => setIsMenuOpen(true)}
+      ></div>
     </>
   );
 }
